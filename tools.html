@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Interactive Calculators — Vital Assure IMF LLP | Delhi</title>
+<meta name="description" content="Use our free interactive term life and SIP investment calculators to estimate required coverage and compound returns. Instant visual results with zero obligations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-l">
+      <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+      <div><div class="nav-t">Vital Assure</div><div class="nav-s">IMF LLP</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="tools.html" class="active">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-c">
+      <a href="contact.html" class="nav-p">Get Quote</a>
+      <a href="contact.html" class="nav-sb">Book Call</a>
+      <button class="mobile-btn" onclick="toggleMenu()" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="tools.html" class="active">Calculators</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <hr/>
+  <a href="contact.html" class="cta">Book Free Call</a>
+</div>
+
+<main>
+<div class="ph">
+  <div class="container">
+    <div class="tag"><span class="d"></span>Free Tools</div>
+    <h1 style="margin-top: 14px;">Know your numbers.<br/>Make smart decisions.</h1>
+    <p>No signup or registration required. Use our free interactive calculators for coverage and compound returns.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="calc-grid">
+      <!-- Term Cover Box -->
+      <div class="calc-box rl">
+        <h3><i class="ri-user-heart-fill" style="color:var(--forest)"></i> Term Cover Calculator</h3>
+        <div class="s">Estimate the optimal life coverage required to secure your family's future</div>
+        
+        <div class="cg">
+          <div class="cl">Annual Income <span id="tl1">₹10L</span></div>
+          <input type="range" id="t1" min="3" max="100" step="1" value="10" oninput="termCalc()">
+        </div>
+        <div class="cg">
+          <div class="cl">Your Age <span id="tl2">30 yrs</span></div>
+          <input type="range" id="t2" min="18" max="60" step="1" value="30" oninput="termCalc()">
+        </div>
+        <div class="cg">
+          <div class="cl">Outstanding Loans <span id="tl3">₹20L</span></div>
+          <input type="range" id="t3" min="0" max="200" step="5" value="20" oninput="termCalc()">
+        </div>
+        <div class="comp-bar">
+          <div id="tbar-inc" class="comp-bar-inv" style="background: var(--forest);"></div>
+          <div id="tbar-loan" class="comp-bar-gain" style="background: var(--gold-light);"></div>
+        </div>
+        
+        <div class="cr one">
+          <div class="l">Recommended Life Cover</div>
+          <div id="tc" class="v b" style="margin: 8px 0;">₹1.2 Cr</div>
+          <div id="tp" class="v g" style="font-size:14px; font-weight:600;">Premium: Quote on Request</div>
+        </div>
+        <a href="contact.html" class="cb o" style="margin-top:24px;">Get This Plan <i class="ri-arrow-right-line"></i></a>
+      </div>
+
+      <!-- SIP Box -->
+      <div class="calc-box rr">
+        <h3><i class="ri-line-chart-fill" style="color:var(--gold)"></i> SIP Calculator</h3>
+        <div class="s">See how your systematic monthly investments can compound and grow over time</div>
+        
+        <div class="cg">
+          <div class="cl">Monthly Investment <span id="sl1">₹10,000</span></div>
+          <input type="range" id="s1" min="500" max="100000" step="500" value="10000" oninput="sipCalc()">
+        </div>
+        <div class="cg">
+          <div class="cl">Expected Return (p.a.) <span id="sl2">12%</span></div>
+          <input type="range" id="s2" min="5" max="20" step="0.5" value="12" oninput="sipCalc()">
+        </div>
+        <div class="cg">
+          <div class="cl">Time Period <span id="sl3">10 years</span></div>
+          <input type="range" id="s3" min="1" max="40" step="1" value="10" oninput="sipCalc()">
+        </div>
+        <div class="comp-bar">
+          <div id="bar-inv" class="comp-bar-inv"></div>
+          <div id="bar-gain" class="comp-bar-gain"></div>
+        </div>
+        
+        <div class="cr">
+          <div class="c">
+            <div class="l">Invested Amount</div>
+            <div id="si" class="v">₹12L</div>
+          </div>
+          <div class="c">
+            <div class="l">Wealth Gained</div>
+            <div id="sr" class="v g">₹11.6L</div>
+          </div>
+          <div class="c">
+            <div class="l">Total Value</div>
+            <div id="sv" class="v b" style="font-size:20px;">₹23.2L</div>
+          </div>
+        </div>
+        <a href="contact.html" class="cb" style="margin-top:24px;">Start Your SIP <i class="ri-arrow-right-up-line"></i></a>
+      </div>
+    </div>
+
+    <!-- Help Banner -->
+    <div style="margin-top:56px; background:var(--paper2); border:1px solid var(--line); border-radius:var(--radius-lg); padding:48px 32px; text-align:center; box-shadow: var(--shadow);" class="r">
+      <h3 style="font-family:var(--display); font-size:22px; font-weight:700; color:var(--ink); margin-bottom:12px">Need help understanding the numbers?</h3>
+      <p style="font-size:15px; color:var(--ink2); line-height:1.65; max-width:520px; margin:0 auto 28px">Naman's team will walk you through the math, assess your goals, and recommend the right plans — completely free of charge.</p>
+      <a href="contact.html" class="cb" style="display:inline-flex; width:auto; padding:16px 36px; align-items:center; gap:8px;">Book a Free Consultation <i class="ri-arrow-right-up-line"></i></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="fb">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+          <span style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink)">Vital Assure IMF LLP</span>
+        </div>
+        <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
+        <div class="reg">Delhi Office: Tri Nagar, Near Tota Ram Bazar &bull; Near Metro: Kanhaiya Nagar</div>
+      </div>
+      <div class="ft">
+        <h4>Products</h4>
+        <a href="products.html#term">Term Life &amp; Savings</a>
+        <a href="products.html#health">Health Insurance</a>
+        <a href="products.html#motor">Motor &amp; Fire Cover</a>
+        <a href="tools.html">Calculators</a>
+      </div>
+      <div class="ft">
+        <h4>Company</h4>
+        <a href="about.html">About Naman</a>
+        <a href="about.html">Our Values</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Book Call</a>
+      </div>
+      <div class="ft">
+        <h4>Regulatory</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Regulatory Disclosures</a>
+        <a href="#">Disclaimer Notice</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>&copy; 2026 VITAL ASSURE IMF LLP. All rights reserved.</span>
+      <span>Insurance is a subject matter of solicitation. *t&amp;c applied.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('active');
+}
+document.getElementById('mobile-menu').querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('active'));
+});
+
+// Scroll Header effect & Scroll Progress
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scroll-progress').style.width = scrolled + '%';
+});
+
+// Intersection observer for entrance animations
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.r, .rl, .rr').forEach(el => revealObserver.observe(el));
+
+// Currency Formatter helper
+function fmt(n) {
+  if (n >= 10000000) return '₹' + (n / 10000000).toFixed(1) + ' Cr';
+  if (n >= 100000) return '₹' + (n / 100000).toFixed(1) + 'L';
+  if (n >= 1000) return '₹' + (n / 1000).toFixed(1) + 'K';
+  return '₹' + Math.round(n);
+}
+
+// Reactive slider track helper
+function updateSliderTrack(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const val = (el.value - el.min) / (el.max - el.min) * 100;
+  el.style.background = `linear-gradient(to right, var(--forest) 0%, var(--forest) ${val}%, var(--paper3) ${val}%, var(--paper3) 100%)`;
+}
+
+// SIP Math
+function sipCalc() {
+  const p = +document.getElementById('s1').value;
+  const r = +document.getElementById('s2').value / 100 / 12;
+  const n = +document.getElementById('s3').value * 12;
+  
+  document.getElementById('sl1').textContent = fmt(p);
+  document.getElementById('sl2').textContent = (+document.getElementById('s2').value).toFixed(1) + '%';
+  document.getElementById('sl3').textContent = document.getElementById('s3').value + ' years';
+  
+  const tot = p * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+  const inv = p * n;
+  
+  document.getElementById('si').textContent = fmt(inv);
+  document.getElementById('sr').textContent = fmt(tot - inv);
+  document.getElementById('sv').textContent = fmt(tot);
+  
+  // Update Visual Composition Bar
+  const pctInv = (inv / tot) * 100;
+  const pctGain = 100 - pctInv;
+  document.getElementById('bar-inv').style.width = pctInv + '%';
+  document.getElementById('bar-gain').style.width = pctGain + '%';
+  
+  updateSliderTrack('s1');
+  updateSliderTrack('s2');
+  updateSliderTrack('s3');
+}
+sipCalc();
+
+// Term Cover Math
+function termCalc() {
+  const inc = +document.getElementById('t1').value;
+  const age = +document.getElementById('t2').value;
+  const loan = +document.getElementById('t3').value;
+  
+  document.getElementById('tl1').textContent = inc >= 100 ? '₹1 Cr' : '₹' + inc + 'L';
+  document.getElementById('tl2').textContent = age + ' yrs';
+  document.getElementById('tl3').textContent = loan >= 200 ? '₹2 Cr' : '₹' + loan + 'L';
+  
+  const cov = Math.round((inc * 10 + loan) * 10) / 10;
+  const covStr = cov >= 100 ? (cov / 100).toFixed(1) + ' Cr' : cov + 'L';
+  const base = age < 30 ? 60 : age < 40 ? 90 : age < 50 ? 140 : 220;
+  const prem = Math.round(base * cov / 100 * 12);
+  
+  document.getElementById('tc').textContent = '₹' + covStr;
+  document.getElementById('tp').textContent = 'Premium: Quote on Request';
+  
+  // Update Visual Composition Bar
+  const pctInc = ((inc * 10) / cov) * 100;
+  const pctLoan = 100 - pctInc;
+  document.getElementById('tbar-inc').style.width = pctInc + '%';
+  document.getElementById('tbar-loan').style.width = pctLoan + '%';
+  
+  updateSliderTrack('t1');
+  updateSliderTrack('t2');
+  updateSliderTrack('t3');
+}
+termCalc();
+</script>
+</body>
+</html>

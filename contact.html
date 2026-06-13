@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — Vital Assure IMF LLP | Free Consultation Delhi</title>
+<meta name="description" content="Book a free consultation with Mr. Naman Sharma and the team at Vital Assure IMF LLP. Get unbiased term life, health, motor insurance &amp; mutual funds advice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-l">
+      <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+      <div><div class="nav-t">Vital Assure</div><div class="nav-s">IMF LLP</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="tools.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <div class="nav-c">
+      <a href="contact.html" class="nav-p">Get Quote</a>
+      <a href="contact.html" class="nav-sb">Book Call</a>
+      <button class="mobile-btn" onclick="toggleMenu()" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="tools.html">Calculators</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="active">Contact</a>
+  <hr/>
+  <a href="contact.html" class="cta">Book Free Call</a>
+</div>
+
+<main>
+<div class="ph">
+  <div class="container">
+    <div class="tag"><span class="d"></span>Get in touch</div>
+    <h1 style="margin-top: 14px;">Let's talk about<br/>your protection.</h1>
+    <p>No pushy sales. No complex jargon. Just clear, honest financial advice — direct from Delhi.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="ci-box rl">
+        <div id="form-container">
+          <div class="tag" style="margin-bottom:12px;"><span class="d"></span>Free Consultation</div>
+          <h2>Tell us about yourself</h2>
+          <p class="sub">Fill in the details below and Naman's advisory team will reach out within 24 hours.</p>
+          
+          <form id="cf" onsubmit="handleFormSubmit(event)">
+            <div class="form-row two">
+              <div class="form-group">
+                <label for="fn">Full Name</label>
+                <input type="text" id="fn" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="ph">Phone Number</label>
+                <input type="tel" id="ph" required placeholder="+91 98765 43210">
+              </div>
+            </div>
+            
+            <div class="form-row two">
+              <div class="form-group">
+                <label for="em">Email Address (Optional)</label>
+                <input type="email" id="em" placeholder="you@example.com">
+              </div>
+              <div class="form-group">
+                <label for="ct">City</label>
+                <input type="text" id="ct" placeholder="Your city">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="lr">I'm looking for</label>
+                <select id="lr" required>
+                  <option value="">Select an option</option>
+                  <option value="term">Term Life &amp; Saving Plans</option>
+                  <option value="health">Health Insurance</option>
+                  <option value="motor">Motor Insurance (Car/Bike)</option>
+                  <option value="sip">SIP Mutual Funds</option>
+                  <option value="fire">Fire &amp; Asset Insurance</option>
+                  <option value="review">Review Existing Portfolio</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="msg">Anything you'd like us to know?</label>
+                <textarea id="msg" placeholder="Optional — age details, prior medical conditions, target coverage amount, etc."></textarea>
+              </div>
+            </div>
+            
+            <div class="form-checkbox">
+              <input type="checkbox" id="ok" required>
+              <span class="checkmark"></span>
+              <label for="ok">I agree to the <a href="#">privacy terms</a> and confirm I am seeking independent advisory.</label>
+            </div>
+            
+            <button type="submit" class="cb">Get Free Advice <i class="ri-send-plane-fill"></i></button>
+          </form>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-view" id="suc">
+          <div class="icon-wrap">
+            <i class="ri-checkbox-circle-fill"></i>
+          </div>
+          <h3>Thank you!</h3>
+          <p>Your details have been securely received. Mr. Naman's team will contact you shortly.</p>
+          <a href="index.html" class="cb">Back to Home <i class="ri-home-4-line"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Sidebar info -->
+      <div class="rr" style="display:flex; flex-direction:column; gap:20px;">
+        <div class="ci-box" style="padding: 32px 28px;">
+          <div class="tag" style="margin-bottom:12px;"><span class="d"></span>Contact Info</div>
+          <h2 style="font-size: 20px;">Direct channels</h2>
+          
+          <div class="contact-info-list" style="margin-top:20px;">
+            <div class="cinfo-card">
+              <div class="icon"><i class="ri-whatsapp-line"></i></div>
+              <div>
+                <h4>Phone &amp; WhatsApp</h4>
+                <p style="margin-top: 2px;">+91 999 09 66 444</p>
+                <a href="https://wa.me/919990966444" target="_blank">Chat on WhatsApp <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+            
+            <div class="cinfo-card">
+              <div class="icon"><i class="ri-mail-send-line"></i></div>
+              <div>
+                <h4>Email Support</h4>
+                <p style="margin-top: 2px;">naman@vitalassure.com</p>
+                <a href="mailto:naman@vitalassure.com">Send email <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+            
+            <div class="cinfo-card">
+              <div class="icon"><i class="ri-map-pin-2-line"></i></div>
+              <div>
+                <h4>Main Office</h4>
+                <p style="margin-top: 2px;">2264/172, Near Tota Ram Bazar, Ganesh Pura, Tri Nagar, Delhi - 110035<br/><strong>Metro: Kanhaiya Nagar</strong></p>
+                <a href="https://maps.google.com" target="_blank">View on Google Maps <i class="ri-arrow-right-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- What to expect -->
+        <div class="ci-box" style="padding: 32px 28px;">
+          <h2 style="font-size: 20px;">What to expect</h2>
+          <div class="badge-stack" style="margin-top: 20px;">
+            <div class="badge-item">
+              <i class="ri-time-line"></i>
+              <span><strong>24-hour response</strong> &mdash; We review and call back within 1 business day.</span>
+            </div>
+            <div class="badge-item">
+              <i class="ri-shield-user-line"></i>
+              <span><strong>Zero obligation</strong> &mdash; 100% free consultation. No credit cards or commitments.</span>
+            </div>
+            <div class="badge-item">
+              <i class="ri-lock-line"></i>
+              <span><strong>Strictly confidential</strong> &mdash; Your contact details are never shared or sold to spam networks.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-note">
+          <p><strong>Prefer a virtual meet?</strong> We consult clients online via Zoom or Google Meet. Mention it in your notes and we'll send a meeting invite link.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="fb">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+          <span style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink)">Vital Assure IMF LLP</span>
+        </div>
+        <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
+        <div class="reg">Delhi Office: Tri Nagar, Near Tota Ram Bazar &bull; Near Metro: Kanhaiya Nagar</div>
+      </div>
+      <div class="ft">
+        <h4>Products</h4>
+        <a href="products.html#term">Term Life &amp; Savings</a>
+        <a href="products.html#health">Health Insurance</a>
+        <a href="products.html#motor">Motor &amp; Fire Cover</a>
+        <a href="tools.html">Calculators</a>
+      </div>
+      <div class="ft">
+        <h4>Company</h4>
+        <a href="about.html">About Naman</a>
+        <a href="about.html">Our Values</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Book Call</a>
+      </div>
+      <div class="ft">
+        <h4>Regulatory</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Regulatory Disclosures</a>
+        <a href="#">Disclaimer Notice</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>&copy; 2026 VITAL ASSURE IMF LLP. All rights reserved.</span>
+      <span>Insurance is a subject matter of solicitation. *t&amp;c applied.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('active');
+}
+document.getElementById('mobile-menu').querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('active'));
+});
+
+// Scroll Header effect & Scroll Progress
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scroll-progress').style.width = scrolled + '%';
+});
+
+// Intersection observer for entrance animations
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.r, .rl, .rr').forEach(el => revealObserver.observe(el));
+
+// Form submission handler
+function handleFormSubmit(e) {
+  e.preventDefault();
+  document.getElementById('cf').style.display = 'none';
+  document.getElementById('suc').classList.add('show');
+}
+</script>
+</body>
+</html>

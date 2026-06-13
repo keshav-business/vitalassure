@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Vital Assure IMF LLP — Term Life, Health, Motor Insurance & Investments | Delhi</title>
+<meta name="description" content="Vital Assure IMF LLP is a Delhi-based insurance & investment marketing firm led by Mr. Naman Sharma (10+ years experience). Unbiased advisor for health, life, motor insurance & mutual funds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-l">
+      <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+      <div><div class="nav-t">Vital Assure</div><div class="nav-s">IMF LLP</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="tools.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-c">
+      <a href="contact.html" class="nav-p">Get Quote</a>
+      <a href="contact.html" class="nav-sb">Book Call</a>
+      <button class="mobile-btn" onclick="toggleMenu()" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="tools.html">Calculators</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <hr/>
+  <a href="contact.html" class="cta">Book Free Call</a>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="tag r"><span class="d"></span>Registered Insurance Marketing Firm &middot; Delhi, India</div>
+        <h1 class="r" style="transition-delay:.05s">Compare &amp; Buy Insurance.<br/>Get Free Advice Today.</h1>
+        <p class="r" style="transition-delay:.1s">Unbiased health, term life, and motor insurance comparisons with zero markup. Speak directly to our expert advisors for clear plan recommendations, custom policy reviews, and end-to-end claim support.</p>
+        <div class="hero-actions r" style="transition-delay:.15s">
+          <a href="contact.html" class="p">Get Free Advice <i class="ri-arrow-right-up-line" style="font-size:16px"></i></a>
+          <a href="products.html" class="s"><i class="ri-compass-3-line"></i> Our Solutions</a>
+        </div>
+        <div class="hero-stats r" style="transition-delay:.2s">
+          <div><span class="n">10+</span><span class="l">Years Experience</span></div>
+          <div><span class="n">18+</span><span class="l">Insurer Partners</span></div>
+          <div><span class="n">5,000+</span><span class="l">Clients Served</span></div>
+          <div><span class="n">4.9</span><span class="l">Client Rating</span></div>
+        </div>
+      </div>
+
+      <div class="hero-vis rr" style="transition-delay:.15s">
+        <form class="lead-form" id="leadForm" onsubmit="handleLeadSubmit(event)">
+          <h3>Share a few details to get started</h3>
+          
+          <div class="form-radios">
+            <label class="radio-label active">
+              <input type="radio" name="insurance_type" value="health" checked onchange="toggleRadioActive(this)">
+              <span class="radio-dot"></span>
+              Health Insurance
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="insurance_type" value="term" onchange="toggleRadioActive(this)">
+              <span class="radio-dot"></span>
+              Term Insurance
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="insurance_type" value="motor" onchange="toggleRadioActive(this)">
+              <span class="radio-dot"></span>
+              Motor Insurance
+            </label>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="form-group phone-group">
+            <div class="phone-prefix">
+              <img src="https://flagcdn.com/w20/in.png" alt="India Flag" class="flag-icon">
+              <i class="ri-arrow-down-s-fill" style="font-size: 14px; color: var(--ink3); margin-left: -2px; margin-right: 2px;"></i>
+              <span>+91</span>
+            </div>
+            <input type="tel" name="phone" placeholder="Mobile Number" pattern="[6-9][0-9]{9}" required>
+          </div>
+          
+          <div class="trust-badge">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>No spam, ever. We'll only call if you ask us to.</span>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" name="query" placeholder="Enter your query (optional)">
+          </div>
+          
+          <div class="form-group">
+            <input type="text" name="source" placeholder="How did you get to know about Vital Assure?">
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            Request Callback <i class="ri-calendar-event-line"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="prod-strip">
+      <a href="products.html#term" class="prod-card t r" style="transition-delay:.25s">
+        <div class="pc-icon"><i class="ri-umbrella-line"></i></div>
+        <h2>Term Life &amp; Saving Plans</h2>
+        <div class="pc-sub">Quote on Request</div>
+        <p>Secure your family's future with cover up to &#8377;10Cr or high-yield LIC &amp; Guaranteed saving plans.</p>
+        <div class="pc-badges"><span>LIC / Guaranteed</span><span>Cover to &#8377;10Cr</span><span>Tax Benefits</span></div>
+        <div class="pc-bottom"><span class="pc-price">On Request</span><span class="pc-arrow">Explore <i class="ri-arrow-right-up-line"></i></span></div>
+      </a>
+      <a href="products.html#health" class="prod-card h r" style="transition-delay:.3s">
+        <div class="pc-icon"><i class="ri-pulse-fill"></i></div>
+        <h2>Health / Mediclaim</h2>
+        <div class="pc-sub">Quote on Request</div>
+        <p>Individual &amp; family floater plans. Cashless treatment at 10,000+ network hospitals with zero hidden terms.</p>
+        <div class="pc-badges"><span>10K+ Hospitals</span><span>98.4% Claims</span><span>Cashless Care</span></div>
+        <div class="pc-bottom"><span class="pc-price">On Request</span><span class="pc-arrow">Explore <i class="ri-arrow-right-up-line"></i></span></div>
+      </a>
+      <a href="products.html#motor" class="prod-card m r" style="transition-delay:.35s">
+        <div class="pc-icon"><i class="ri-car-fill"></i></div>
+        <h2>Motor &amp; Fire Insurance</h2>
+        <div class="pc-sub">Quote on Request</div>
+        <p>Comprehensive coverage for cars, scooty/bikes, commercial vehicles, and factories/premises fire insurance.</p>
+        <div class="pc-badges"><span>Car / Two-Wheeler</span><span>Commercial Auto</span><span>Fire &amp; Stock</span></div>
+        <div class="pc-bottom"><span class="pc-price">On Request</span><span class="pc-arrow">Explore <i class="ri-arrow-right-up-line"></i></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STAT TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span><i class="ri-star-fill"></i> <b>4.9&#9733;</b> google rating</span>
+    <span><i class="ri-verified-badge-fill"></i> claim support experience</span>
+    <span><i class="ri-shake-hands-fill"></i> <b>18+</b> insurer partners compared</span>
+    <span><i class="ri-hospital-line"></i> Delhi-based advisory</span>
+    <span><i class="ri-heart-fill"></i> <b>Thousands</b> of clients served</span>
+    <span><i class="ri-award-fill"></i> <b>10+</b> years experience</span>
+    
+    <span><i class="ri-star-fill"></i> <b>4.9&#9733;</b> google rating</span>
+    <span><i class="ri-verified-badge-fill"></i> claim support experience</span>
+    <span><i class="ri-shake-hands-fill"></i> <b>18+</b> insurer partners compared</span>
+    <span><i class="ri-hospital-line"></i> Delhi-based advisory</span>
+    <span><i class="ri-heart-fill"></i> <b>Thousands</b> of clients served</span>
+    <span><i class="ri-award-fill"></i> <b>10+</b> years experience</span>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>How It Works</div>
+      <h2>Three steps to peace of mind.</h2>
+      <p>Getting the right coverage is simpler than you think. No paperwork, no confusion.</p>
+    </div>
+    <div class="steps-grid r">
+      <div class="step-card">
+        <div class="num">01</div>
+        <h3><i class="ri-chat-voice-fill"></i> Tell us your needs</h3>
+        <p>Share a few details about your age, dependents, and health. Takes 2 minutes.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">02</div>
+        <h3><i class="ri-equalizer-fill"></i> Compare top plans</h3>
+        <p>We compare 25+ insurers and present only the 2-3 plans that truly fit your profile.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">03</div>
+        <h3><i class="ri-verified-badge-fill"></i> Get covered today</h3>
+        <p>Apply online, get instant issuance, and we'll handle all claims for life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFE PATH -->
+<section class="section bg-surf border-t">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>Plan Ahead</div>
+      <h2>Your cover should grow as your life does.</h2>
+      <p>Term insurance isn't a one-time purchase — it's a number that should track your real-world responsibilities.</p>
+    </div>
+    <div class="lp-grid-new">
+      <div class="lp-card-new r">
+        <div class="lp-bg-num">01</div>
+        <div class="lp-top">
+          <span class="lp-age-badge">Age ~24</span>
+          <div class="lp-icon-circle"><i class="ri-award-fill"></i></div>
+        </div>
+        <h3 class="lp-title">First job</h3>
+        <p class="lp-desc">Lock in low premiums early, before age and health affect your rate.</p>
+        <div class="lp-cover-pill">&#8377;50L cover</div>
+      </div>
+      
+      <div class="lp-card-new r" style="transition-delay:.05s">
+        <div class="lp-bg-num">02</div>
+        <div class="lp-top">
+          <span class="lp-age-badge">Age ~28</span>
+          <div class="lp-icon-circle"><i class="ri-hearts-fill"></i></div>
+        </div>
+        <h3 class="lp-title">Marriage</h3>
+        <p class="lp-desc">Your income now supports two — step up cover to protect a shared life.</p>
+        <div class="lp-cover-pill">&#8377;75L cover</div>
+      </div>
+      
+      <div class="lp-card-new r" style="transition-delay:.1s">
+        <div class="lp-bg-num">03</div>
+        <div class="lp-top">
+          <span class="lp-age-badge">Age ~31</span>
+          <div class="lp-icon-circle"><i class="ri-team-fill"></i></div>
+        </div>
+        <h3 class="lp-title">First child</h3>
+        <p class="lp-desc">Add child-education riders and raise cover to fund two decades of growth.</p>
+        <div class="lp-cover-pill">&#8377;1Cr+ cover</div>
+      </div>
+      
+      <div class="lp-card-new r" style="transition-delay:.15s">
+        <div class="lp-bg-num">04</div>
+        <div class="lp-top">
+          <span class="lp-age-badge">Age ~34</span>
+          <div class="lp-icon-circle"><i class="ri-key-fill"></i></div>
+        </div>
+        <h3 class="lp-title">Home loan</h3>
+        <p class="lp-desc">Make sure your cover fully clears any outstanding loan if something happens.</p>
+        <div class="lp-cover-pill">+ loan amount</div>
+      </div>
+      
+      <div class="lp-card-new r" style="transition-delay:.2s">
+        <div class="lp-bg-num">05</div>
+        <div class="lp-top">
+          <span class="lp-age-badge">Age ~45</span>
+          <div class="lp-icon-circle"><i class="ri-line-chart-fill"></i></div>
+        </div>
+        <h3 class="lp-title">Peak earnings</h3>
+        <p class="lp-desc">Cover is at its highest. Add critical illness and health top-ups now.</p>
+        <div class="lp-cover-pill">&#8377;1.5&ndash;2Cr cover</div>
+      </div>
+      
+      <div class="lp-card-new r" style="transition-delay:.25s">
+        <div class="lp-bg-num">06</div>
+        <div class="lp-top">
+          <span class="lp-age-badge">Age 55+</span>
+          <div class="lp-icon-circle"><i class="ri-sun-fill"></i></div>
+        </div>
+        <h3 class="lp-title">Near retirement</h3>
+        <p class="lp-desc">Term cover tapers down; health insurance becomes the priority for life.</p>
+        <div class="lp-cover-pill">Health-first</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS DEEP DIVE -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>Solutions We Provide</div>
+      <h2>We Deal in Insurance &amp; Investments</h2>
+      <p>Independent advisory and complete portfolio planning with zero conflicts of interest.</p>
+    </div>
+    
+    <div class="sol-grid">
+      <!-- Card 1 -->
+      <div class="sol-card r">
+        <div class="sol-ico"><i class="ri-pulse-fill"></i></div>
+        <h3>Health / Mediclaim Insurance</h3>
+        <p>Comprehensive health covers for families &amp; individuals. Cashless hospitalisation, pre/post cover, and room rent coverage.</p>
+        <a href="products.html#health" class="sol-action">Learn More <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <!-- Card 2 -->
+      <div class="sol-card r" style="transition-delay:.05s">
+        <div class="sol-ico"><i class="ri-umbrella-line"></i></div>
+        <h3>Term Life &amp; Saving Plans</h3>
+        <p>Pure term life protection up to ₹10Cr or LIC savings plans offering high guaranteed maturity returns.</p>
+        <a href="products.html#term" class="sol-action">Learn More <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <!-- Card 3 -->
+      <div class="sol-card r" style="transition-delay:.1s">
+        <div class="sol-ico"><i class="ri-line-chart-fill"></i></div>
+        <h3>S.I.P. Mutual Funds</h3>
+        <p>Build wealth systematically with tailored SIP plans, ELSS tax saving mutual funds, and custom portfolios.</p>
+        <a href="products.html#sip" class="sol-action">Learn More <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <!-- Card 4 -->
+      <div class="sol-card r" style="transition-delay:.15s">
+        <div class="sol-ico"><i class="ri-car-fill"></i></div>
+        <h3>Car &amp; Commercial Insurance</h3>
+        <p>Comprehensive and third-party policies for private cars, trucks, auto-rickshaws, and commercial buses.</p>
+        <a href="products.html#motor" class="sol-action">Learn More <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <!-- Card 5 -->
+      <div class="sol-card r" style="transition-delay:.2s">
+        <div class="sol-ico"><i class="ri-motorbike-fill"></i></div>
+        <h3>Scooty / Bike Insurance</h3>
+        <p>Instant two-wheeler plans online. Third-party protection, zero-depreciation covers, and fast digital renewal.</p>
+        <a href="products.html#motor" class="sol-action">Learn More <i class="ri-arrow-right-line"></i></a>
+      </div>
+      <!-- Card 6 -->
+      <div class="sol-card r" style="transition-delay:.25s">
+        <div class="sol-ico"><i class="ri-fire-fill"></i></div>
+        <h3>Fire &amp; Asset Insurance</h3>
+        <p>Secure commercial premises, factory buildings, inventory stock, and residential properties against fire and theft.</p>
+        <a href="products.html#fire" class="sol-action">Learn More <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section bg-surf border-t">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>Why Choose Us</div>
+      <h2>We don't just sell policies. We support you.</h2>
+      <p>Independent advisory built on trust, transparency, and zero conflicts of interest.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card r">
+        <span class="w-num">01</span>
+        <div class="why-ico"><i class="ri-scales-3-fill"></i></div>
+        <h3>18+ Top Insurers</h3>
+        <p>With 18+ top companies, we offer only the best policies—never pushing low-quality plans.</p>
+      </div>
+      <div class="why-card r" style="transition-delay:.1s">
+        <span class="w-num">02</span>
+        <div class="why-ico"><i class="ri-hand-heart-fill"></i></div>
+        <h3>Claim Support</h3>
+        <p>Strong claim support experience with top insurers—standing by you when you need it most.</p>
+      </div>
+      <div class="why-card r" style="transition-delay:.2s">
+        <span class="w-num">03</span>
+        <div class="why-ico"><i class="ri-verified-badge-fill"></i></div>
+        <h3>Honest Guidance</h3>
+        <p>Expert comparisons, policy review, and portfolio planning with zero hidden terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section style="padding:48px 0">
+  <div class="container">
+    <div class="st st-ctr r" style="margin-bottom:28px">
+      <div class="tag"><span class="d"></span>Our Insurance &amp; Investment Partners</div>
+    </div>
+    <div class="partners r">
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <circle cx="20" cy="18" r="11" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M14,18 C14,14 26,14 26,18" stroke="currentColor" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="18" r="3"/>
+          <text x="38" y="23" font-size="15" font-weight="900" font-family="'Outfit',sans-serif" letter-spacing="1">LIC</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <rect x="5" y="8" width="20" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M10,18 L20,18 M15,13 L15,23" stroke="currentColor" stroke-width="2"/>
+          <text x="32" y="20" font-size="11" font-weight="900" font-family="'Outfit',sans-serif">HDFC</text>
+          <text x="32" y="29" font-size="8" font-weight="700" font-family="'Inter',sans-serif" letter-spacing="1">ERGO</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <path d="M8,10 L20,10 L14,24 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M14,10 L26,10 L20,24 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="34" y="23" font-size="12" font-weight="900" font-family="'Outfit',sans-serif">MAX LIFE</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <path d="M8,22 L18,10 L28,22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M12,25 L18,17 L24,25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="36" y="19" font-size="10" font-weight="900" font-family="'Outfit',sans-serif">TATA</text>
+          <text x="36" y="28" font-size="9" font-weight="700" font-family="'Inter',sans-serif" letter-spacing="1.5">AIG</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <circle cx="16" cy="18" r="8" fill="none" stroke="currentColor" stroke-width="3"/>
+          <rect x="25" y="10" width="4" height="16" rx="1"/>
+          <text x="34" y="23" font-size="16" font-weight="900" font-family="'Outfit',sans-serif" letter-spacing="0.5">digit</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <polygon points="18,6 21,15 30,15 23,20 25,29 18,24 11,29 13,20 6,15 15,15" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="36" y="23" font-size="11" font-weight="900" font-family="'Outfit',sans-serif">STAR HEALTH</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <path d="M18,8 C12,8 10,16 18,24 C26,16 24,8 18,8 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="32" y="23" font-size="13" font-weight="900" font-family="'Outfit',sans-serif" letter-spacing="0.5">care</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <rect x="8" y="10" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="16" cy="18" r="3"/>
+          <text x="30" y="23" font-size="12" font-weight="900" font-family="'Outfit',sans-serif">NIVA BUPA</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <path d="M6,10 L18,10 L18,24 L12,28 L6,24 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <text x="26" y="19" font-size="10" font-weight="900" font-family="'Outfit',sans-serif">ICICI</text>
+          <text x="26" y="28" font-size="8" font-weight="600" font-family="'Inter',sans-serif">Lombard</text>
+        </svg>
+      </div>
+      <div>
+        <svg viewBox="0 0 120 36" class="partner-logo" fill="currentColor">
+          <path d="M12,8 L24,18 L12,28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="32" y="19" font-size="10" font-weight="900" font-family="'Outfit',sans-serif">BAJAJ</text>
+          <text x="32" y="28" font-size="8" font-weight="600" font-family="'Inter',sans-serif">Allianz</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATORS -->
+<section class="section bg-surf border-t" id="tools">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>Free Tools</div>
+      <h2>Know your numbers in seconds.</h2>
+      <p>Calculate your ideal coverage and investment growth instantly.</p>
+    </div>
+    <div class="calc-grid">
+      <div class="calc-box rl">
+        <h3>Term Cover Calculator</h3>
+        <div class="s">Find your ideal sum assured</div>
+        <div class="cg"><div class="cl">Annual Income <span id="tl1">&#8377;10L</span></div><input type="range" id="t1" min="3" max="100" step="1" value="10" oninput="termCalc()"></div>
+        <div class="cg"><div class="cl">Your Age <span id="tl2">30 yrs</span></div><input type="range" id="t2" min="18" max="60" step="1" value="30" oninput="termCalc()"></div>
+        <div class="cg"><div class="cl">Outstanding Loans <span id="tl3">&#8377;20L</span></div><input type="range" id="t3" min="0" max="200" step="5" value="20" oninput="termCalc()"></div>
+        <div class="comp-bar">
+          <div id="tbar-inc" class="comp-bar-inv" style="background: var(--forest);"></div>
+          <div id="tbar-loan" class="comp-bar-gain" style="background: var(--gold-light);"></div>
+        </div>
+        <div class="cr one">
+          <div class="l">Recommended Cover</div>
+          <div id="tc" class="v b" style="margin:6px 0">&#8377;1.2 Cr</div>
+          <div id="tp" style="font-size:13px;font-weight:500;color:var(--ink2);font-family:'Inter',sans-serif">Premium: Quote on Request</div>
+        </div>
+        <a href="contact.html" class="cb o">Get This Plan <i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="calc-box rr">
+        <h3>SIP Calculator</h3>
+        <div class="s">Estimate your investment growth</div>
+        <div class="cg"><div class="cl">Monthly Investment <span id="sl1">&#8377;10,000</span></div><input type="range" id="s1" min="500" max="100000" step="500" value="10000" oninput="sipCalc()"></div>
+        <div class="cg"><div class="cl">Expected Return (p.a.) <span id="sl2">12%</span></div><input type="range" id="s2" min="5" max="20" step=".5" value="12" oninput="sipCalc()"></div>
+        <div class="cg"><div class="cl">Time Period <span id="sl3">10 years</span></div><input type="range" id="s3" min="1" max="40" step="1" value="10" oninput="sipCalc()"></div>
+        <div class="comp-bar">
+          <div id="bar-inv" class="comp-bar-inv"></div>
+          <div id="bar-gain" class="comp-bar-gain"></div>
+        </div>
+        <div class="cr">
+          <div class="c"><div class="l">Invested</div><div class="v" id="si">&#8377;12L</div></div>
+          <div class="c"><div class="l">Returns</div><div class="v g" id="sr">&#8377;11.6L</div></div>
+          <div class="c"><div class="l">Total</div><div id="sv" class="v b">&#8377;23.2L</div></div>
+        </div>
+        <a href="contact.html" class="cb">Start a SIP <i class="ri-arrow-right-up-line"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div class="test-h r">
+      <div>
+        <div class="tag"><span class="d"></span>Client Stories</div>
+        <h2 style="font-family:var(--display);font-size:clamp(28px,3.8vw,44px);font-weight:600;letter-spacing:-.02em;margin-top:14px;color:var(--ink)">Real people, real peace of mind.</h2>
+      </div>
+      <div class="test-r"><div class="n">4.9<span style="color:var(--gold);font-size:24px;margin-left:4px">&#9733;</span></div><div class="s">from 2,800+ reviews</div></div>
+    </div>
+    <div class="test-grid">
+      <div class="tc r">
+        <div class="stars">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+        </div>
+        <p class="q">"Naman compared 15 term plans in one session. I got &#8377;1 crore cover at half the premium my bank quoted. The clarity was something else."</p>
+        <div class="t-user">
+          <div class="t-avatar">RG</div>
+          <div>
+            <div class="nm">Rahul Gupta</div>
+            <div class="rl">Software Engineer &middot; Gurugram</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc r" style="transition-delay:.1s">
+        <div class="stars">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+        </div>
+        <p class="q">"When my father was hospitalised, Vital Assure handled the entire cashless claim. We never touched a single form."</p>
+        <div class="t-user">
+          <div class="t-avatar">PM</div>
+          <div>
+            <div class="nm">Priya Mehta</div>
+            <div class="rl">Homemaker &middot; Delhi NCR</div>
+          </div>
+        </div>
+      </div>
+      <div class="tc r" style="transition-delay:.2s">
+        <div class="stars">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+        </div>
+        <p class="q">"Group health for 40 employees set up in 3 days. Flawless. Vital Assure is the only partner my company needs."</p>
+        <div class="t-user">
+          <div class="t-avatar">AK</div>
+          <div>
+            <div class="nm">Amit Kumar</div>
+            <div class="rl">Founder &middot; TechStartup, Noida</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section bg-surf border-t">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>FAQ</div>
+      <h2>Got questions? We've got answers.</h2>
+    </div>
+    <div class="faq-grid r">
+      <div class="faq-item open">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What's the difference between term life and health insurance?</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">Term life insurance pays a lump sum to your family if you pass away during the policy term. Health insurance covers medical expenses like hospitalisation, surgery, and critical illness. They serve different needs — one protects your family's future, the other protects your health today.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How much term cover do I actually need?</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">A good rule of thumb is 10-15x your annual income plus any outstanding loans. Use our term cover calculator above to get a personalised number in seconds.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Do I need a medical exam to get term life insurance?</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">For coverage up to &#8377;1Cr, many insurers offer no-medical-exam policies. For higher coverage, a basic health check may be needed. We'll find the best option for your profile.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Is your consultation really free?</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">Yes, completely free. We earn from insurers, not from you. Comparing plans, advice, and ongoing claims support — always at zero cost.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How quickly can I get covered?</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </button>
+        <div class="faq-a">Most term life policies issue instantly — within hours of application. Health insurance typically takes 1-3 days. We'll expedite everything for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SNIPPET (NAMAN SHARMA SPOTLIGHT) -->
+<section class="section bg-surf border-t" id="about-naman">
+  <div class="container">
+    <div class="about-grid-new">
+      <!-- Left side: Large Portrait -->
+      <div class="founder-image-col rl">
+        <div class="founder-img-wrapper">
+          <img src="naman_sharma.png" alt="Naman Sharma" class="founder-large-img">
+          <div class="founder-img-accent"></div>
+        </div>
+      </div>
+      
+      <!-- Right side: Bio details and stats -->
+      <div class="founder-content-col rr">
+        <div class="tag"><span class="d"></span>About Our Founder</div>
+        <h2>Naman Sharma</h2>
+        <h4 class="founder-subtitle">Founder &mdash; Vital Assure IMF LLP</h4>
+        
+        <p class="founder-qt">"I started Vital Assure because every Indian deserves unbiased, transparent financial guidance. No pressure. No jargon. Just clarity."</p>
+        
+        <div class="founder-stats-minimal">
+          <div class="f-stat">
+            <span class="f-num">10+</span>
+            <span class="f-lbl">Years Experience</span>
+          </div>
+          <div class="f-divider"></div>
+          <div class="f-stat">
+            <span class="f-num">5,000+</span>
+            <span class="f-lbl">Clients Served</span>
+          </div>
+        </div>
+        
+        <p class="founder-desc">Vital Assure IMF LLP is founded by Mr. Naman Sharma, who brings over 10+ years of core experience in insurance and investment planning. Under his guidance, we serve as a trusted partner for Delhi families and businesses seeking comprehensive financial protection.</p>
+        
+        <div class="founder-features">
+          <div class="f-feat-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong>Strong Claims Support:</strong> Coordinates directly with top insurers for fast, hassle-free settlement when it matters most.
+            </div>
+          </div>
+          <div class="f-feat-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong>Portfolio Planning &amp; Review:</strong> Reviews existing policies, identifies coverage gaps, and optimizes your insurance assets.
+            </div>
+          </div>
+          <div class="f-feat-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong>Unbiased Choice:</strong> Compares plans across 18+ leading companies so you only pay for what you need.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SNIPPET -->
+<section class="section bg-surf border-t">
+  <div class="container">
+    <div class="st st-ctr r">
+      <div class="tag"><span class="d"></span>From Our Blog</div>
+      <h2>Latest insights &amp; guides.</h2>
+      <p>Simple, practical advice on insurance and finance — no jargon, no fluff.</p>
+    </div>
+    <div class="blog-grid">
+      <a href="#" class="blog-card r">
+        <div class="img" style="background: linear-gradient(135deg, var(--forest-bg) 0%, #d4ede6 100%); color: var(--forest);"><i class="ri-umbrella-line" style="font-size:48px; opacity:0.85;"></i></div>
+        <div class="body">
+          <div class="cat">Term Life</div>
+          <h3>How much term cover do you really need?</h3>
+          <p>A simple formula to calculate your ideal coverage based on income, dependents, and lifestyle.</p>
+          <div class="date">Updated May 2026 &middot; 4 min read</div>
+        </div>
+      </a>
+      <a href="#" class="blog-card r" style="transition-delay:.1s">
+        <div class="img" style="background: linear-gradient(135deg, var(--gold-bg) 0%, #f7e6c4 100%); color: var(--gold);"><i class="ri-pulse-fill" style="font-size:48px; opacity:0.85;"></i></div>
+        <div class="body">
+          <div class="cat">Health</div>
+          <h3>Cashless vs reimbursement: which wins?</h3>
+          <p>Everything you need to know about cashless hospitalisation and why it matters at claim time.</p>
+          <div class="date">Updated Apr 2026 &middot; 3 min read</div>
+        </div>
+      </a>
+      <a href="#" class="blog-card r" style="transition-delay:.2s">
+        <div class="img" style="background: linear-gradient(135deg, var(--paper3) 0%, #d5e2da 100%); color: var(--ink3);"><i class="ri-funds-line" style="font-size:48px; opacity:0.85;"></i></div>
+        <div class="body">
+          <div class="cat">Investing</div>
+          <h3>SIP vs lump sum: which builds more wealth?</h3>
+          <p>We break down the numbers and help you pick the right investment approach for your goals.</p>
+          <div class="date">Updated Mar 2026 &middot; 5 min read</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-surf border-t">
+  <div class="container">
+    <div class="cta-section r">
+      <h2>Ready to protect what matters?</h2>
+      <p>Naman's team will reach out within 2 business hours. No scripts. No pressure. Just clarity.</p>
+      <a href="contact.html">Book Your Free Consultation <i class="ri-arrow-right-up-line" style="font-size:16px"></i></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="fb">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+          <span style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink)">Vital Assure IMF LLP</span>
+        </div>
+        <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
+        <div class="reg">Delhi Office: Tri Nagar, Near Tota Ram Bazar &bull; Near Metro: Kanhaiya Nagar</div>
+      </div>
+      <div class="ft">
+        <h4>Products</h4>
+        <a href="products.html#term">Term Life &amp; Savings</a>
+        <a href="products.html#health">Health Insurance</a>
+        <a href="products.html#motor">Motor &amp; Fire Cover</a>
+        <a href="tools.html">Calculators</a>
+      </div>
+      <div class="ft">
+        <h4>Company</h4>
+        <a href="about.html">About Naman</a>
+        <a href="about.html">Our Values</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Book Call</a>
+      </div>
+      <div class="ft">
+        <h4>Regulatory</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Regulatory Disclosures</a>
+        <a href="#">Disclaimer Notice</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>&copy; 2026 VITAL ASSURE IMF LLP. All rights reserved.</span>
+      <span>Insurance is a subject matter of solicitation. *t&amp;c applied.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobile-menu').classList.toggle('active')}
+document.getElementById('mobile-menu').querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobile-menu').classList.remove('active')))
+
+// Scroll Progress & Nav Background Handler
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scroll-progress').style.width = scrolled + '%';
+});
+
+const ro=new IntersectionObserver(e=>{e.forEach(a=>{if(a.isIntersecting)a.target.classList.add('in')})},{threshold:.1});
+document.querySelectorAll('.r,.rl,.rr').forEach(e=>ro.observe(e));
+function fmt(n){if(n>=10000000)return'\u20B9'+(n/10000000).toFixed(1)+' Cr';if(n>=100000)return'\u20B9'+(n/100000).toFixed(1)+'L';if(n>=1000)return'\u20B9'+(n/1000).toFixed(1)+'K';return'\u20B9'+Math.round(n)}
+
+function updateSliderTrack(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  const val = (el.value - el.min) / (el.max - el.min) * 100;
+  el.style.background = `linear-gradient(to right, var(--forest) 0%, var(--forest) ${val}%, var(--paper3) ${val}%, var(--paper3) 100%)`;
+}
+
+function sipCalc(){
+  const p=+document.getElementById('s1').value,r=+document.getElementById('s2').value/100/12,n=+document.getElementById('s3').value*12;
+  document.getElementById('sl1').textContent=fmt(p);document.getElementById('sl2').textContent=(+document.getElementById('s2').value).toFixed(1)+'%';document.getElementById('sl3').textContent=document.getElementById('s3').value+' years';
+  const tot=p*((Math.pow(1+r,n)-1)/r)*(1+r),inv=p*n;
+  document.getElementById('si').textContent=fmt(inv);document.getElementById('sr').textContent=fmt(tot-inv);document.getElementById('sv').textContent=fmt(tot);
+  
+  // Update Visual Composition Bar
+  const pctInv = (inv / tot) * 100;
+  const pctGain = 100 - pctInv;
+  document.getElementById('bar-inv').style.width = pctInv + '%';
+  document.getElementById('bar-gain').style.width = pctGain + '%';
+  
+  updateSliderTrack('s1');
+  updateSliderTrack('s2');
+  updateSliderTrack('s3');
+}sipCalc();
+
+function termCalc(){
+  const inc=+document.getElementById('t1').value,age=+document.getElementById('t2').value,loan=+document.getElementById('t3').value;
+  document.getElementById('tl1').textContent=inc>=100?'\u20B91Cr':'\u20B9'+inc+'L';document.getElementById('tl2').textContent=age+' yrs';document.getElementById('tl3').textContent=loan>=200?'\u20B92Cr':'\u20B9'+loan+'L';
+  const cov=Math.round((inc*10+loan)*10)/10,covStr=cov>=100?(cov/100).toFixed(1)+' Cr':cov+'L',base=age<30?60:age<40?90:age<50?140:220,prem=Math.round(base*cov/100*12);
+  document.getElementById('tc').textContent='\u20B9'+covStr;document.getElementById('tp').textContent='Premium: Quote on Request';
+  
+  // Update Visual Composition Bar
+  const pctInc = ((inc * 10) / cov) * 100;
+  const pctLoan = 100 - pctInc;
+  document.getElementById('tbar-inc').style.width = pctInc + '%';
+  document.getElementById('tbar-loan').style.width = pctLoan + '%';
+  
+  updateSliderTrack('t1');
+  updateSliderTrack('t2');
+  updateSliderTrack('t3');
+}termCalc();
+
+function toggleFaq(btn){const item=btn.parentElement;item.classList.toggle('open')}
+
+function toggleRadioActive(radio) {
+  const labels = radio.closest('.form-radios').querySelectorAll('.radio-label');
+  labels.forEach(l => l.classList.remove('active'));
+  if (radio.checked) {
+    radio.closest('.radio-label').classList.add('active');
+  }
+}
+
+function handleLeadSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const submitBtn = form.querySelector('.submit-btn');
+  const originalText = submitBtn.innerHTML;
+  
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = 'Sending... <i class="ri-loader-4-line" style="display:inline-block; animation: spin 1s linear infinite"></i>';
+  
+  // Simulate successful lead submission
+  setTimeout(() => {
+    submitBtn.innerHTML = 'Success! Callback Scheduled <i class="ri-checkbox-circle-line"></i>';
+    submitBtn.style.background = '#2e7d32';
+    submitBtn.style.boxShadow = '0 4px 12px rgba(46, 125, 50, 0.2)';
+    
+    // Clear form inputs
+    setTimeout(() => {
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      submitBtn.style.background = '';
+      submitBtn.style.boxShadow = '';
+      
+      // Reset radio buttons layout active class
+      const radios = form.querySelectorAll('input[type="radio"]');
+      radios.forEach(r => {
+        if(r.value === 'health') {
+          r.checked = true;
+        } else {
+          r.checked = false;
+        }
+        toggleRadioActive(r);
+      });
+    }, 3000);
+  }, 1200);
+}
+</script>
+</body>
+</html>
