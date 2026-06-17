@@ -17,7 +17,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-l">
-      <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+      <div class="nav-m"><img src="logo.png" alt="Vital Assure Logo"></div>
       <div><div class="nav-t">Vital Assure</div><div class="nav-s">IMF LLP</div></div>
     </a>
     <div class="nav-links">
@@ -50,6 +50,18 @@
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="container hero-inner">
+    <!-- Mobile Hero (God-Mode Premium UX) -->
+    <div class="hero-mobile-content">
+      <div class="hero-badge-capsule">
+        <i class="ri-verified-badge-fill"></i> Delhi's Unbiased Advisor
+      </div>
+      <h1>Protect Your <span class="highlight">Health</span>, <span class="highlight">Motor</span> &amp; <span class="highlight">Life</span></h1>
+      <p class="sub">Compare and buy the best insurance plans with direct claims support.</p>
+      <a href="contact.html" class="god-hero-btn">
+        Get a Free Quote <i class="ri-arrow-right-up-line"></i>
+      </a>
+    </div>
+    
     <div class="hero-grid">
       <div>
         <div class="tag r"><span class="d"></span>Registered Insurance Marketing Firm &middot; Delhi, India</div>
@@ -126,31 +138,81 @@
       </div>
     </div>
 
-    <div class="prod-strip">
-      <a href="products.html#term" class="prod-card t r" style="transition-delay:.25s">
-        <div class="pc-icon"><i class="ri-umbrella-line"></i></div>
-        <h2>Term Life &amp; Saving Plans</h2>
-        <div class="pc-sub">Quote on Request</div>
-        <p>Secure your family's future with cover up to &#8377;10Cr or high-yield LIC &amp; Guaranteed saving plans.</p>
-        <div class="pc-badges"><span>LIC / Guaranteed</span><span>Cover to &#8377;10Cr</span><span>Tax Benefits</span></div>
-        <div class="pc-bottom"><span class="pc-price">On Request</span><span class="pc-arrow">Explore <i class="ri-arrow-right-up-line"></i></span></div>
+    <div class="hero-tiles-grid">
+      <a href="products.html#health" class="hero-tile r" style="transition-delay:.25s">
+        <div class="tile-icon"><i class="ri-heart-pulse-fill"></i></div>
+        <span>Health<br>Insurance</span>
       </a>
-      <a href="products.html#health" class="prod-card h r" style="transition-delay:.3s">
-        <div class="pc-icon"><i class="ri-pulse-fill"></i></div>
-        <h2>Health / Mediclaim</h2>
-        <div class="pc-sub">Quote on Request</div>
-        <p>Individual &amp; family floater plans. Cashless treatment at 10,000+ network hospitals with zero hidden terms.</p>
-        <div class="pc-badges"><span>10K+ Hospitals</span><span>98.4% Claims</span><span>Cashless Care</span></div>
-        <div class="pc-bottom"><span class="pc-price">On Request</span><span class="pc-arrow">Explore <i class="ri-arrow-right-up-line"></i></span></div>
+      <a href="products.html#term" class="hero-tile r" style="transition-delay:.3s">
+        <div class="tile-icon"><i class="ri-umbrella-fill"></i></div>
+        <span>Term<br>Insurance</span>
       </a>
-      <a href="products.html#motor" class="prod-card m r" style="transition-delay:.35s">
-        <div class="pc-icon"><i class="ri-car-fill"></i></div>
-        <h2>Motor &amp; Fire Insurance</h2>
-        <div class="pc-sub">Quote on Request</div>
-        <p>Comprehensive coverage for cars, scooty/bikes, commercial vehicles, and factories/premises fire insurance.</p>
-        <div class="pc-badges"><span>Car / Two-Wheeler</span><span>Commercial Auto</span><span>Fire &amp; Stock</span></div>
-        <div class="pc-bottom"><span class="pc-price">On Request</span><span class="pc-arrow">Explore <i class="ri-arrow-right-up-line"></i></span></div>
+      <a href="products.html#motor" class="hero-tile r" style="transition-delay:.35s">
+        <div class="tile-icon"><i class="ri-car-fill"></i></div>
+        <span>Motor<br>Insurance</span>
       </a>
+      <a href="contact.html" class="hero-tile r" style="transition-delay:.4s">
+        <div class="tile-icon"><i class="ri-verified-badge-fill"></i></div>
+        <span>Claim<br>Assistance</span>
+      </a>
+      <a href="contact.html" class="hero-tile hidden-mobile-tile r" style="transition-delay:.45s">
+        <div class="tile-icon"><i class="ri-plane-fill"></i></div>
+        <span>Travel<br>Insurance</span>
+      </a>
+      <a href="contact.html" class="hero-tile hidden-mobile-tile r" style="transition-delay:.5s">
+        <div class="tile-icon"><i class="ri-team-fill"></i></div>
+        <span>Employees<br>Insurance</span>
+      </a>
+      <a href="tools.html" class="hero-tile hidden-mobile-tile r" style="transition-delay:.55s">
+        <div class="tile-icon"><i class="ri-line-chart-fill"></i></div>
+        <span>Investment<br>Plan</span>
+      </a>
+      <a href="products.html" class="hero-tile hidden-mobile-tile r" style="transition-delay:.6s">
+        <div class="tile-icon"><i class="ri-hand-coin-fill"></i></div>
+        <span>Guaranteed<br>Return Plan</span>
+      </a>
+    </div>
+
+    <!-- Toggle button for mobile tiles -->
+    <div class="tiles-toggle-wrapper">
+      <button id="tiles-toggle-btn" class="tiles-toggle-btn" onclick="toggleMobileTiles()">
+        View All Products <i class="ri-arrow-down-s-line"></i>
+      </button>
+    </div>
+
+    <script>
+      function toggleMobileTiles() {
+        const tiles = document.querySelectorAll('.hero-tile.hidden-mobile-tile');
+        const btn = document.getElementById('tiles-toggle-btn');
+        let isExpanded = false;
+        
+        tiles.forEach(tile => {
+          if (tile.classList.contains('show')) {
+            tile.classList.remove('show');
+          } else {
+            tile.classList.add('show');
+            isExpanded = true;
+          }
+        });
+        
+        if (isExpanded) {
+          btn.innerHTML = 'Show Less <i class="ri-arrow-up-s-line"></i>';
+        } else {
+          btn.innerHTML = 'View All Products <i class="ri-arrow-down-s-line"></i>';
+        }
+      }
+    </script>
+    
+    <!-- Desktop-only CTA below the tiles -->
+    <div class="hero-desktop-cta">
+      <a href="contact.html" class="desktop-hero-btn">Contact Now <i class="ri-arrow-right-line"></i></a>
+    </div>
+    
+    <!-- Mobile Hero Bottom Trust Badge (God-Mode Premium UX) -->
+    <div class="hero-mobile-footer-trust">
+      <span><i class="ri-google-fill"></i> 4.9★ Google Rating</span>
+      <span class="dot">&bull;</span>
+      <span>10+ Years Experience</span>
     </div>
   </div>
 </section>
@@ -173,6 +235,65 @@
     <span><i class="ri-award-fill"></i> <b>10+</b> years experience</span>
   </div>
 </div>
+
+<!-- ABOUT SNIPPET (NAMAN SHARMA SPOTLIGHT) -->
+<section class="section bg-surf border-t" id="about-naman">
+  <div class="container">
+    <div class="about-grid-new">
+      <!-- Left side: Large Portrait -->
+      <div class="founder-image-col rl">
+        <div class="founder-img-wrapper">
+          <img src="naman_sharma.png" alt="Naman Sharma" class="founder-large-img">
+          <div class="founder-img-accent"></div>
+        </div>
+      </div>
+      
+      <!-- Right side: Bio details and stats -->
+      <div class="founder-content-col rr">
+        <div class="tag"><span class="d"></span>About Our Founder</div>
+        <h2>Naman Sharma</h2>
+        <h4 class="founder-subtitle">Founder &mdash; Vital Assure IMF LLP</h4>
+        
+        <p class="founder-qt">"I started Vital Assure because every Indian deserves unbiased, transparent financial guidance. No pressure. No jargon. Just clarity."</p>
+        
+        <div class="founder-stats-minimal">
+          <div class="f-stat">
+            <span class="f-num">10+</span>
+            <span class="f-lbl">Years Experience</span>
+          </div>
+          <div class="f-divider"></div>
+          <div class="f-stat">
+            <span class="f-num">5,000+</span>
+            <span class="f-lbl">Clients Served</span>
+          </div>
+        </div>
+        
+        <p class="founder-desc">Vital Assure IMF LLP is founded by Mr. Naman Sharma, who brings over 10+ years of core experience in insurance and investment planning. Under his guidance, we serve as a trusted partner for Delhi families and businesses seeking comprehensive financial protection.</p>
+        
+        <div class="founder-features">
+          <div class="f-feat-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong>Strong Claims Support:</strong> Coordinates directly with top insurers for fast, hassle-free settlement when it matters most.
+            </div>
+          </div>
+          <div class="f-feat-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong>Portfolio Planning &amp; Review:</strong> Reviews existing policies, identifies coverage gaps, and optimizes your insurance assets.
+            </div>
+          </div>
+          <div class="f-feat-item">
+            <i class="ri-checkbox-circle-fill"></i>
+            <div>
+              <strong>Unbiased Choice:</strong> Compares plans across 18+ leading companies so you only pay for what you need.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- HOW IT WORKS -->
 <section class="section">
@@ -366,6 +487,8 @@
     </div>
   </div>
 </section>
+
+
 
 <!-- TRUST BAR -->
 <section style="padding:48px 0">
@@ -597,64 +720,7 @@
   </div>
 </section>
 
-<!-- ABOUT SNIPPET (NAMAN SHARMA SPOTLIGHT) -->
-<section class="section bg-surf border-t" id="about-naman">
-  <div class="container">
-    <div class="about-grid-new">
-      <!-- Left side: Large Portrait -->
-      <div class="founder-image-col rl">
-        <div class="founder-img-wrapper">
-          <img src="naman_sharma.png" alt="Naman Sharma" class="founder-large-img">
-          <div class="founder-img-accent"></div>
-        </div>
-      </div>
-      
-      <!-- Right side: Bio details and stats -->
-      <div class="founder-content-col rr">
-        <div class="tag"><span class="d"></span>About Our Founder</div>
-        <h2>Naman Sharma</h2>
-        <h4 class="founder-subtitle">Founder &mdash; Vital Assure IMF LLP</h4>
-        
-        <p class="founder-qt">"I started Vital Assure because every Indian deserves unbiased, transparent financial guidance. No pressure. No jargon. Just clarity."</p>
-        
-        <div class="founder-stats-minimal">
-          <div class="f-stat">
-            <span class="f-num">10+</span>
-            <span class="f-lbl">Years Experience</span>
-          </div>
-          <div class="f-divider"></div>
-          <div class="f-stat">
-            <span class="f-num">5,000+</span>
-            <span class="f-lbl">Clients Served</span>
-          </div>
-        </div>
-        
-        <p class="founder-desc">Vital Assure IMF LLP is founded by Mr. Naman Sharma, who brings over 10+ years of core experience in insurance and investment planning. Under his guidance, we serve as a trusted partner for Delhi families and businesses seeking comprehensive financial protection.</p>
-        
-        <div class="founder-features">
-          <div class="f-feat-item">
-            <i class="ri-checkbox-circle-fill"></i>
-            <div>
-              <strong>Strong Claims Support:</strong> Coordinates directly with top insurers for fast, hassle-free settlement when it matters most.
-            </div>
-          </div>
-          <div class="f-feat-item">
-            <i class="ri-checkbox-circle-fill"></i>
-            <div>
-              <strong>Portfolio Planning &amp; Review:</strong> Reviews existing policies, identifies coverage gaps, and optimizes your insurance assets.
-            </div>
-          </div>
-          <div class="f-feat-item">
-            <i class="ri-checkbox-circle-fill"></i>
-            <div>
-              <strong>Unbiased Choice:</strong> Compares plans across 18+ leading companies so you only pay for what you need.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- BLOG SNIPPET -->
 <section class="section bg-surf border-t">
@@ -665,7 +731,7 @@
       <p>Simple, practical advice on insurance and finance — no jargon, no fluff.</p>
     </div>
     <div class="blog-grid">
-      <a href="#" class="blog-card r">
+      <a href="blog.html?post=term-life" class="blog-card r">
         <div class="img" style="background: linear-gradient(135deg, var(--forest-bg) 0%, #d4ede6 100%); color: var(--forest);"><i class="ri-umbrella-line" style="font-size:48px; opacity:0.85;"></i></div>
         <div class="body">
           <div class="cat">Term Life</div>
@@ -674,16 +740,16 @@
           <div class="date">Updated May 2026 &middot; 4 min read</div>
         </div>
       </a>
-      <a href="#" class="blog-card r" style="transition-delay:.1s">
+      <a href="blog.html?post=health" class="blog-card r" style="transition-delay:.1s">
         <div class="img" style="background: linear-gradient(135deg, var(--gold-bg) 0%, #f7e6c4 100%); color: var(--gold);"><i class="ri-pulse-fill" style="font-size:48px; opacity:0.85;"></i></div>
         <div class="body">
           <div class="cat">Health</div>
-          <h3>Cashless vs reimbursement: which wins?</h3>
+          <h3>Cashless vs reimbursement: which wins at claim time?</h3>
           <p>Everything you need to know about cashless hospitalisation and why it matters at claim time.</p>
           <div class="date">Updated Apr 2026 &middot; 3 min read</div>
         </div>
       </a>
-      <a href="#" class="blog-card r" style="transition-delay:.2s">
+      <a href="blog.html?post=sip" class="blog-card r" style="transition-delay:.2s">
         <div class="img" style="background: linear-gradient(135deg, var(--paper3) 0%, #d5e2da 100%); color: var(--ink3);"><i class="ri-funds-line" style="font-size:48px; opacity:0.85;"></i></div>
         <div class="body">
           <div class="cat">Investing</div>
@@ -714,7 +780,7 @@
     <div class="ft-grid">
       <div class="fb">
         <div style="display:flex;align-items:center;gap:12px">
-          <div class="nav-m"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg"><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#004d3c"/><stop offset="1" stop-color="#006b53"/></linearGradient></defs><path d="M20 2L38 10V24C38 34 20 38 20 38S2 34 2 24V10L20 2Z" fill="url(#lg)"/><path d="M20 5.5L35 12.5V24C35 32.5 20 36 20 36S5 32.5 5 24V12.5L20 5.5Z" fill="none" stroke="#b38234" stroke-width="1.2" opacity=".5"/><path d="M11 14L20 29L29 14" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="18.5" y="6.5" width="3" height="3" rx=".5" fill="#b38234" transform="rotate(45 20 8)"/></svg></div>
+          <div class="nav-m"><img src="logo.png" alt="Vital Assure Logo"></div>
           <span style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink)">Vital Assure IMF LLP</span>
         </div>
         <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
@@ -856,5 +922,9 @@ function handleLeadSubmit(event) {
   }, 1200);
 }
 </script>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919990966444" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="ri-whatsapp-line"></i>
+</a>
 </body>
 </html>

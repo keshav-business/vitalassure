@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title id="meta-title">Blog — Vital Assure IMF LLP | Insurance &amp; Investment Guides</title>
+<meta id="meta-desc" name="description" content="Read expert financial insights, insurance guides, and wealth compounding tips by Naman Sharma and the Vital Assure team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+<link rel="stylesheet" href="style.css">
+<style>
+.blog-post-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media(min-width: 1024px) {
+  .blog-post-container {
+    grid-template-columns: 8fr 4fr;
+    gap: 64px;
+  }
+}
+.blog-body {
+  font-family: var(--mono);
+  font-size: 16.5px;
+  color: var(--ink2);
+  line-height: 1.8;
+}
+.blog-body h2 {
+  font-family: var(--display);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  color: var(--ink);
+  margin-top: 36px;
+  margin-bottom: 16px;
+  letter-spacing: -.02em;
+}
+.blog-body h3 {
+  font-family: var(--display);
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 800;
+  color: var(--ink);
+  margin-top: 28px;
+  margin-bottom: 12px;
+  letter-spacing: -.01em;
+}
+.blog-body p {
+  margin-bottom: 20px;
+}
+.blog-body ul, .blog-body ol {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+.blog-body li {
+  margin-bottom: 8px;
+}
+.blog-body blockquote {
+  border-left: 4px solid var(--forest);
+  background: var(--paper2);
+  padding: 16px 24px;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--ink);
+  margin: 28px 0;
+}
+.blog-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.blog-author img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper3);
+}
+.blog-author-info h5 {
+  font-family: var(--display);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.blog-author-info span {
+  font-size: 12px;
+  color: var(--ink3);
+}
+.sidebar-box {
+  background: var(--paper2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  position: sticky;
+  top: 100px;
+  box-shadow: var(--shadow);
+}
+.sidebar-box h4 {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.sidebar-box p {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.sidebar-box .sb-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--forest);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.sidebar-box .sb-btn:hover {
+  background: #005a46;
+  transform: translateY(-2px);
+}
+.blog-list-card {
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  margin-bottom: 12px;
+}
+.blog-list-card:hover {
+  border-color: var(--line);
+  background: var(--paper2);
+}
+.blog-list-card .list-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.blog-list-card h5 {
+  font-family: var(--display);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+@media(max-width: 768px) {
+  .blog-body {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .blog-body h2 {
+    font-size: 20px;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  .blog-body h3 {
+    font-size: 17px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+  .sidebar-box {
+    padding: 24px 20px;
+    position: relative !important;
+    top: auto !important;
+    box-shadow: none;
+    border-radius: 16px;
+  }
+  .blog-post-container {
+    gap: 36px;
+  }
+  .blog-body blockquote {
+    padding: 12px 16px;
+    margin: 20px 0;
+  }
+  .blog-list-card {
+    padding: 10px 8px;
+    gap: 12px;
+  }
+  .blog-list-card .list-img {
+    width: 48px;
+    height: 48px;
+  }
+  .blog-list-card h5 {
+    font-size: 13.5px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-l">
+      <div class="nav-m"><img src="logo.png" alt="Vital Assure Logo"></div>
+      <div><div class="nav-t">Vital Assure</div><div class="nav-s">IMF LLP</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="tools.html">Calculators</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-c">
+      <a href="contact.html" class="nav-p">Get Quote</a>
+      <a href="contact.html" class="nav-sb">Book Call</a>
+      <button class="mobile-btn" onclick="toggleMenu()" aria-label="Open menu"><i class="ri-menu-3-line"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="tools.html">Calculators</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <hr/>
+  <a href="contact.html" class="cta">Book Free Call</a>
+</div>
+
+<main>
+<div class="ph" style="padding-bottom: 24px; text-align: center;">
+  <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <div class="tag" id="post-cat" style="display: inline-flex; justify-content: center;"><span class="d"></span>Insight</div>
+    <h1 id="post-title" style="margin-top: 14px; margin-bottom: 8px; font-size: clamp(26px, 4.5vw, 42px); line-height: 1.15; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">Blog Article Title</h1>
+    <p id="post-date" style="margin-top: 8px; margin-left: auto; margin-right: auto; text-align: center;">Updated May 2026 &middot; 4 min read</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top: 32px;">
+  <div class="container">
+    <div class="blog-post-container">
+      
+      <!-- Article Area -->
+      <article class="rl">
+        <div class="blog-body" id="post-content">
+          <!-- Dynamically populated -->
+        </div>
+        
+        <div class="blog-author">
+          <img src="naman_sharma.png" alt="Naman Sharma">
+          <div class="blog-author-info">
+            <h5>Naman Sharma</h5>
+            <span>Founder &amp; Certified Financial Advisor &bull; 10+ Years Exp</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="rr">
+        <div class="sidebar-box">
+          <h4>Free Policy Review</h4>
+          <p>Confused by fine print? Mr. Naman's team offers a 100% free, zero-obligation check of your current health and life plans.</p>
+          <a href="contact.html" class="sb-btn">Request Callback <i class="ri-whatsapp-line"></i></a>
+          
+          <h4 style="margin-top: 36px; margin-bottom: 16px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink3);">Other Guides</h4>
+          <div id="other-posts-list">
+            <!-- Dynamically populated list -->
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="fb">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="nav-m"><img src="logo.png" alt="Vital Assure Logo"></div>
+          <span style="font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink)">Vital Assure IMF LLP</span>
+        </div>
+        <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
+        <div class="reg">Delhi Office: Tri Nagar, Near Tota Ram Bazar &bull; Near Metro: Kanhaiya Nagar</div>
+      </div>
+      <div class="ft">
+        <h4>Products</h4>
+        <a href="products.html#term">Term Life &amp; Savings</a>
+        <a href="products.html#health">Health Insurance</a>
+        <a href="products.html#motor">Motor &amp; Fire Cover</a>
+        <a href="tools.html">Calculators</a>
+      </div>
+      <div class="ft">
+        <h4>Company</h4>
+        <a href="about.html">About Naman</a>
+        <a href="about.html">Our Values</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="contact.html">Book Call</a>
+      </div>
+      <div class="ft">
+        <h4>Regulatory</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Regulatory Disclosures</a>
+        <a href="#">Disclaimer Notice</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>&copy; 2026 VITAL ASSURE IMF LLP. All rights reserved.</span>
+      <span>Insurance is a subject matter of solicitation. *t&amp;c applied.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('active');
+}
+document.getElementById('mobile-menu').querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('active'));
+});
+
+// Scroll Header effect & Scroll Progress
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scroll-progress').style.width = scrolled + '%';
+});
+
+// Intersection observer for entrance animations
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+    }
+  });
+}, { threshold: 0.05 });
+document.querySelectorAll('.r, .rl, .rr').forEach(el => revealObserver.observe(el));
+
+// Articles database
+const articles = {
+  'term-life': {
+    title: 'How much term cover do you really need?',
+    category: 'Term Life',
+    date: 'Updated May 2026 &middot; 4 min read',
+    metaDesc: 'Calculate your ideal term life insurance coverage using Naman Sharma’s simple income replacement formula.',
+    content: `
+      <p>Term life insurance is the most fundamental pillar of financial planning. It’s designed to do one primary thing: replace your economic value for your family if you are no longer around. Yet, many people either skip it entirely or pick a generic sum assured (like ₹50 Lakhs) without doing the math.</p>
+      
+      <blockquote>"Your bank or agent might pitch you standard plans, but your life insurance cover must match your exact liabilities and family dreams." &mdash; Naman Sharma</blockquote>
+      
+      <h2>1. The Income Replacement Rule</h2>
+      <p>A popular rule of thumb is to buy cover worth 10x to 15x of your annual income. While this is a decent starting point, the income replacement method is much more accurate. Your cover should be large enough that if it is invested in safe fixed income assets (yielding 6-7%), it generates the same annual income you earn today.</p>
+      <p>For example, if you earn <strong>₹10 Lakhs per year</strong>, a sum assured of <strong>₹1.5 Crore</strong> invested at 6.7% p.a. will yield ₹10 Lakhs every year to sustain your family’s daily expenses.</p>
+
+      <h2>2. The Liabilities (Adding Debt)</h2>
+      <p>If you have outstanding loans — such as a home loan of ₹40 Lakhs, a car loan of ₹5 Lakhs, or credit card bills — your family will inherit these debts. If you buy a ₹1.5 Crore cover but have ₹45 Lakhs in debt, your family's actual replacement pool shrinks to ₹1.05 Crore.</p>
+      <p><strong>Rule: Always add your total outstanding liabilities directly to the term cover size.</strong></p>
+
+      <h2>3. Future Goals (Children's Milestones)</h2>
+      <p>Do you have young children? Their higher education (especially professional courses like engineering, medicine, or MBA) and weddings are massive future expenses. You should estimate these costs in today's terms and add them to the required cover.</p>
+      
+      <h2>The Master Formula</h2>
+      <p>To calculate your recommended term cover, use this simple formula:</p>
+      <p style="background:var(--paper3); padding:12px 16px; border-radius:12px; font-weight:600; font-size:clamp(12px, 3.5vw, 15px); color:var(--ink); font-family:var(--display); border:1px dashed var(--line); text-align:center; word-break:break-word; line-height:1.5;">
+        Ideal Cover = (Annual Income &times; 10) + Total Outstanding Debt + Future Milestones - Existing Assets
+      </p>
+      <p>If you need assistance calculating your numbers, Mr. Naman's team can help you map this out in a 10-minute free review session.</p>
+    `
+  },
+  'health': {
+    title: 'Cashless vs reimbursement: which wins at claim time?',
+    category: 'Health Insurance',
+    date: 'Updated Apr 2026 &middot; 3 min read',
+    metaDesc: 'Compare cashless vs reimbursement medical insurance claims. Learn why cashless claims win and how to navigate emergencies.',
+    content: `
+      <p>When you are admitted to a hospital, the last thing you want to worry about is arranging emergency cash or chasing paperwork. In health insurance, claims are processed in two ways: Cashless or Reimbursement. Understanding the distinction is vital for a stress-free hospital experience.</p>
+
+      <h2>What is Cashless Claim Processing?</h2>
+      <p>In a cashless claim, the insurer settles the medical bills directly with the hospital. You only pay for non-medical expenses (like gloves, gowns, and registration fees) which are typically not covered by standard policies. This facility is only available at the insurer’s <strong>Network Hospitals</strong>.</p>
+
+      <h2>What is Reimbursement Claim Processing?</h2>
+      <p>If you choose a hospital that is <strong>not</strong> in the insurer’s network, you must pay all hospital bills out of your pocket upon discharge. Afterwards, you collect all original invoices, lab reports, pharmacy bills, and doctor summaries, and mail them to the insurer for approval. The insurer reimburses the eligible amount after a few weeks of audit.</p>
+
+      <blockquote>"Unless it is a severe emergency and no network hospital is nearby, always opt for cashless treatment. Chasing original hospital physical stamps and invoices is a massive post-recovery headache." &mdash; Naman Sharma</blockquote>
+
+      <h2>Why Cashless Wins Every Time</h2>
+      <ul>
+        <li><strong>No Liquidity Stress:</strong> In treatments like angioplasty or chemotherapy, bills can instantly shoot up to ₹4 Lakhs or ₹8 Lakhs. A cashless approval ensures you don't have to break fixed deposits or borrow money in a panic.</li>
+        <li><strong>Pre-authorisation Support:</strong> The hospital’s insurance desk coordinates directly with the Third Party Administrator (TPA), getting the budget approved while you focus on care.</li>
+        <li><strong>Faster Discharges:</strong> Once the final bill is ready, it is sent to the insurer, who issues the final clearance within 2-4 hours.</li>
+      </ul>
+
+      <h2>Key Tips for Smoother Claims</h2>
+      <ol>
+        <li>Check the active cashless network list before getting admitted for planned surgeries.</li>
+        <li>Keep your digital health card and ID cards handy at all times.</li>
+        <li>Notify the insurer within 24 hours of emergency admission, or 48 hours prior to planned hospitalisation.</li>
+      </ol>
+    `
+  },
+  'sip': {
+    title: 'SIP vs lump sum: which builds more wealth?',
+    category: 'Investing',
+    date: 'Updated Mar 2026 &middot; 5 min read',
+    metaDesc: 'Compare Systematic Investment Plans (SIP) vs lump sum mutual fund investments. Learn the advantages of rupee cost averaging.',
+    content: `
+      <p>Investing in mutual funds is one of the most effective ways to compound wealth and beat inflation in India. However, beginners often debate whether they should invest a large sum at once (Lump Sum) or invest a fixed amount every month (SIP). Here is an objective analysis of how both work.</p>
+
+      <h2>1. What is an SIP?</h2>
+      <p>A Systematic Investment Plan (SIP) allows you to invest a fixed amount of money (as low as ₹500) into a mutual fund scheme at regular intervals (usually monthly). Your bank account is auto-debited, and units are purchased at the prevailing Net Asset Value (NAV).</p>
+
+      <h2>2. What is a Lump Sum?</h2>
+      <p>Lump sum investing is a one-time transaction. If you receive a corporate bonus, sell a property, or have surplus funds sitting in a bank account, you invest the entire amount into a mutual fund scheme in one go.</p>
+
+      <h2>The Power of Rupee Cost Averaging</h2>
+      <p>The biggest benefit of an SIP is <strong>Rupee Cost Averaging</strong>. The equity markets are highly volatile. When you invest via SIP, your fixed monthly amount buys:</p>
+      <ul>
+        <li>Fewer units when the market is high and NAV is expensive.</li>
+        <li>More units when the market falls and NAV is cheap.</li>
+      </ul>
+      <p>Over time, this averages out the purchase cost of your units. You do not need to "time the market" — which is almost impossible to do consistently.</p>
+
+      <h2>Which Option is Best for You?</h2>
+      <div style="width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin: 24px 0; border: 1px solid var(--line); border-radius: 12px;">
+        <table class="st-table" style="width:100%; border-collapse:collapse; font-size:14px; min-width: 500px; margin: 0;">
+          <thead>
+            <tr style="background:var(--forest-bg); color:var(--forest); text-align: left;">
+              <th style="padding:12px; border-bottom:1.5px solid var(--line);">Factor</th>
+              <th style="padding:12px; border-bottom:1.5px solid var(--line);">SIP</th>
+              <th style="padding:12px; border-bottom:1.5px solid var(--line);">Lump Sum</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:12px;"><strong>Market Timing</strong></td><td style="padding:12px;">Not needed. Ideal for volatile markets.</td><td style="padding:12px;">High risk if invested at market peaks.</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:12px;"><strong>Discipline</strong></td><td style="padding:12px;">Automated. Instills regular savings habit.</td><td style="padding:12px;">Requires active investment decisions.</td></tr>
+            <tr style="border-bottom:1px solid var(--line);"><td style="padding:12px;"><strong>Best Used For</strong></td><td style="padding:12px;">Salaried individuals and long-term goals.</td><td style="padding:12px;">Bonuses, business profits, inheritance.</td></tr>
+            <tr><td style="padding:12px;"><strong>Compounding</strong></td><td style="padding:12px;">Compounded monthly.</td><td style="padding:12px;">Compounds from day one.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <blockquote>"If you have a large sum of money but are worried about market dips, invest it in a liquid debt fund and set up a Systematic Transfer Plan (STP) to transfer small amounts into equity funds monthly. It combines the benefits of both." &mdash; Naman Sharma</blockquote>
+      
+      <p>Over a 10+ year horizon, diversified equity SIPs in large, mid, or small-cap funds have historically delivered compounded annual growth rates (CAGR) of 12% to 15%, making them a supreme tool for wealth creation.</p>
+    `
+  }
+};
+
+// Render active post based on URL param
+const params = new URLSearchParams(window.location.search);
+let activeKey = params.get('post');
+if (!activeKey || !articles[activeKey]) {
+  activeKey = 'term-life'; // Default
+}
+
+const currentPost = articles[activeKey];
+
+// Update DOM
+document.title = currentPost.title + " — Vital Assure IMF LLP";
+document.getElementById('meta-title').textContent = currentPost.title + " — Vital Assure IMF LLP";
+document.getElementById('meta-desc').setAttribute('content', currentPost.metaDesc);
+document.getElementById('post-cat').innerHTML = `<span class="d"></span>` + currentPost.category;
+document.getElementById('post-title').innerHTML = currentPost.title;
+document.getElementById('post-date').innerHTML = currentPost.date;
+document.getElementById('post-content').innerHTML = currentPost.content;
+
+// Populate other posts in sidebar
+const otherList = document.getElementById('other-posts-list');
+Object.keys(articles).forEach(key => {
+  if (key !== activeKey) {
+    const p = articles[key];
+    let iconClass = 'ri-umbrella-line';
+    let grad = 'linear-gradient(135deg, var(--forest-bg) 0%, #d4ede6 100%)';
+    let color = 'var(--forest)';
+    if (key === 'health') {
+      iconClass = 'ri-pulse-fill';
+      grad = 'linear-gradient(135deg, var(--gold-bg) 0%, #f7e6c4 100%)';
+      color = 'var(--gold)';
+    } else if (key === 'sip') {
+      iconClass = 'ri-funds-line';
+      grad = 'linear-gradient(135deg, var(--paper3) 0%, #d5e2da 100%)';
+      color = 'var(--ink3)';
+    }
+    
+    const item = document.createElement('a');
+    item.href = `blog.html?post=${key}`;
+    item.className = 'blog-list-card';
+    item.innerHTML = `
+      <div class="list-img" style="background: ${grad}; color: ${color};">
+        <i class="${iconClass}" style="font-size:24px;"></i>
+      </div>
+      <div>
+        <h5>${p.title}</h5>
+        <span style="font-size:11px; color:var(--ink3);">${p.category}</span>
+      </div>
+    `;
+    otherList.appendChild(item);
+  }
+});
+</script>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919990966444" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="ri-whatsapp-line"></i>
+</a>
+</body>
+</html>
