@@ -204,6 +204,7 @@
         </div>
         <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
         <div class="reg">Delhi Office: Tri Nagar, Near Tota Ram Bazar &bull; Near Metro: Kanhaiya Nagar</div>
+        <div class="irdai-badge"><i class="ri-verified-badge-fill"></i><div><strong>IRDAI Licensed</strong><span>Reg No: IMF08890220250771 &middot; Delhi, India</span></div></div>
       </div>
       <div class="ft">
         <h4>Products</h4>
@@ -267,8 +268,41 @@ document.querySelectorAll('.r, .rl, .rr').forEach(el => revealObserver.observe(e
 // Form submission handler
 function handleFormSubmit(e) {
   e.preventDefault();
-  document.getElementById('cf').style.display = 'none';
-  document.getElementById('suc').classList.add('show');
+  const form = e.target;
+  const btn = form.querySelector('.cb');
+  const original = btn.innerHTML;
+  
+  btn.disabled = true;
+  btn.innerHTML = 'Sending... <i class="ri-loader-4-line" style="display:inline-block; animation: spin 1s linear infinite"></i>';
+  
+  const data = {
+    name: document.getElementById('fn').value,
+    phone: document.getElementById('ph').value,
+    email: document.getElementById('em').value,
+    city: document.getElementById('ct').value,
+    looking_for: document.getElementById('lr').value,
+    message: document.getElementById('msg').value
+  };
+
+  fetch('https://formspree.io/f/mdarakjq', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+  .then(() => {
+    document.getElementById('cf').style.display = 'none';
+    document.getElementById('suc').classList.add('show');
+  })
+  .catch(() => {
+    btn.innerHTML = 'Failed. Try again? <i class="ri-error-warning-line"></i>';
+    btn.style.background = '#c62828';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = original;
+      btn.style.background = '';
+    }, 3000);
+  });
 }
 </script>
 <!-- FLOATING WHATSAPP BUTTON -->

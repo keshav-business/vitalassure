@@ -77,6 +77,7 @@
           <div><span class="n">5,000+</span><span class="l">Clients Served</span></div>
           <div><span class="n">4.9</span><span class="l">Client Rating</span></div>
         </div>
+        <div class="irdai-hero r" style="transition-delay:.25s"><i class="ri-award-fill"></i> IRDAI Licensed &middot; Reg: IMF08890220250771</div>
       </div>
 
       <div class="hero-vis rr" style="transition-delay:.15s">
@@ -785,6 +786,7 @@
         </div>
         <p>Insurance &amp; Investment marketing firm. Tri Nagar, Delhi, India.</p>
         <div class="reg">Delhi Office: Tri Nagar, Near Tota Ram Bazar &bull; Near Metro: Kanhaiya Nagar</div>
+        <div class="irdai-badge"><i class="ri-verified-badge-fill"></i><div><strong>IRDAI Licensed</strong><span>Reg No: IMF08890220250771 &middot; Delhi, India</span></div></div>
       </div>
       <div class="ft">
         <h4>Products</h4>
@@ -894,13 +896,29 @@ function handleLeadSubmit(event) {
   submitBtn.disabled = true;
   submitBtn.innerHTML = 'Sending... <i class="ri-loader-4-line" style="display:inline-block; animation: spin 1s linear infinite"></i>';
   
-  // Simulate successful lead submission
-  setTimeout(() => {
+  const data = {
+    insurance_type: form.querySelector('input[name="insurance_type"]:checked')?.value || '',
+    name: form.querySelector('input[name="name"]').value,
+    phone: form.querySelector('input[name="phone"]').value,
+    email: form.querySelector('input[name="email"]').value,
+    query: form.querySelector('input[name="query"]').value || '',
+    source: form.querySelector('input[name="source"]').value || ''
+  };
+
+  fetch('https://formspree.io/f/mdarakjq', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(r => {
+    if (!r.ok) throw new Error('Server error');
+    return r.json();
+  })
+  .then(() => {
     submitBtn.innerHTML = 'Success! Callback Scheduled <i class="ri-checkbox-circle-line"></i>';
     submitBtn.style.background = '#2e7d32';
     submitBtn.style.boxShadow = '0 4px 12px rgba(46, 125, 50, 0.2)';
     
-    // Clear form inputs
     setTimeout(() => {
       form.reset();
       submitBtn.disabled = false;
@@ -908,18 +926,22 @@ function handleLeadSubmit(event) {
       submitBtn.style.background = '';
       submitBtn.style.boxShadow = '';
       
-      // Reset radio buttons layout active class
       const radios = form.querySelectorAll('input[type="radio"]');
       radios.forEach(r => {
-        if(r.value === 'health') {
-          r.checked = true;
-        } else {
-          r.checked = false;
-        }
+        r.checked = r.value === 'health';
         toggleRadioActive(r);
       });
     }, 3000);
-  }, 1200);
+  })
+  .catch(() => {
+    submitBtn.innerHTML = 'Failed to send. Try again? <i class="ri-error-warning-line"></i>';
+    submitBtn.style.background = '#c62828';
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      submitBtn.style.background = '';
+    }, 3000);
+  });
 }
 </script>
 <!-- FLOATING WHATSAPP BUTTON -->

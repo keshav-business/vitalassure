@@ -2665,6 +2665,53 @@ input[type=range]::-moz-range-thumb {
   }
 }
 
+.irdai-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--forest-bg);
+  border: 1px solid var(--forest-border);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--forest);
+  line-height: 1.4;
+}
+.irdai-badge i {
+  font-size: 18px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+.irdai-badge strong {
+  display: block;
+  font-weight: 700;
+}
+.irdai-badge span {
+  display: block;
+  font-weight: 500;
+  opacity: .85;
+}
+
+.irdai-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-border);
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+}
+.irdai-hero i {
+  font-size: 16px;
+  color: var(--gold);
+}
+@media(max-width:768px){.irdai-hero{font-size:11px;padding:6px 14px;margin-top:16px}}
+
 /* Page Header Section */
 .ph {
   padding: 130px 0 80px;
