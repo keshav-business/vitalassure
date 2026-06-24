@@ -2384,14 +2384,19 @@ input[type=range]::-moz-range-thumb {
   gap: 12px;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   margin: 20px 0;
+  touch-action: manipulation;
 }
 .form-checkbox input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 28px;
+  width: 28px;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
 }
 .checkmark {
   position: relative;
@@ -3385,6 +3390,10 @@ input[type=range]::-moz-range-thumb {
   .badge-item i{font-size:16px}
   .info-note{padding:14px 16px}
   .info-note p{font-size:11px}
+  .form-checkbox{margin:16px 0;padding:8px 0}
+  .form-checkbox input[type="checkbox"]{height:36px;width:36px;left:-6px;top:-8px}
+  .checkmark{height:24px;width:24px;min-width:24px;margin-top:0}
+  .form-checkbox label{font-size:13px;padding:4px 0}
 }
 
 /* --- Help banner (tools page) mobile --- */
